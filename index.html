@@ -1,47 +1,386 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Projeto Bootstrap</title>
-    <link rel="stylesheet" 
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
 
+    <!-- Personalização visual -->
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f6f8;
+            scroll-behavior: smooth;
+        }
+
+        /* Títulos principais */
+        h1 {
+            font-family: Aptos, Arial, sans-serif;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-family: Calibri, Arial, sans-serif;
+            font-weight: bold;
+        }
+
+        .fonte-times {
+            font-family: "Times New Roman", serif;
+        }
+
+        /* Navegação */
+        .nav-link {
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #fd7e14 !important;
+        }
+
+        /* Containers */
+        .conteudo {
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+        .destaque-laranja {
+            border-left: 5px solid #fd7e14;
+        }
+
+        section[id] {
+            scroll-margin-top: 20px;
+        }
+
+    </style>
 </head>
+
 <body>
+
+    <!-- BARRA DE NAVEGAÇÃO -->
     <header>
-        <nav class="container">
-          <ul class="nav justify-content-center gap-4 text-bg-primary">
-            <li class="nav-item">Home</li>
-            <li class="nav-item">Dicas</li>
-            <li class="nav-item">Sobre</li>
-            <li class="nav-item">Informação</li>
-            </ul>
-        </nav>
+        <nav class="container py-3">
+            <ul class="nav justify-content-center gap-4 text-bg-primary rounded p-3">
+
+             <li class="nav-item">
+              <a class="nav-link text-white" href="index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+             <a class="nav-link text-white" href="dicas.html">Dicas</a>
+             </li>
+
+            <li class="nav-item">
+             <a class="nav-link text-white" href="sobre.html">Sobre</a>
+            </li>
+
+            <li class="nav-item">
+            <a class="nav-link text-white" href="informação.html">Informação</a>
+            </li>
+
+     </ul>
+     </nav>
     </header>
 
-    <section class="container-fluid">
-        <section>Seja Bem Vindo</section>
-        <section>Introdução</section>
-        <section>História</section>
-        <section>Geral</section>
-        <section>Encerramento</section>
-    </section>
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="container-fluid py-4">
 
-    <section class="d-grid gap-2 col-4 mx-auto">
-        <button class="btn btn-primary" type="button">Clique</button>
-        <button class="btn btn-primary" type="button">Não Clique</button>
-    </section>
+        <!-- HOME -->
+        <section id="home" class="container bg-primary text-white p-5 rounded mb-4 conteudo">
 
-    <div class="row">
-        <div> </div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+            <h1>Seja Bem-Vindo!</h1>
+
+            <p>
+                Conheça os frameworks web e descubra como
+                eles facilitam o desenvolvimento de páginas.
+            </p>
+
+        </section>
+
+        <!-- DICAS -->
+        <section id="dicas" class="container bg-white p-4 rounded mb-4 conteudo destaque-laranja">
+
+            <h2 class="text-primary">Introdução</h2>
+
+            <p>
+                O HTML e o CSS são a base fundamental de qualquer página ou aplicação na internet. 
+                Juntamente com os frameworks, eles permitem criar sites modernos, 
+                responsivos e fáceis de manter.
+            </p>
+
+        </section>
+
+        <!-- SOBRE -->
+        <section id="sobre" class="container bg-success text-white p-4 rounded mb-4 conteudo">
+
+            <h2>História</h2>
+            <p>
+                Os frameworks no desenvolvimento web surgiram para resolver um problema central:
+                 a repetição exaustiva de código e a falta de padronização,
+                 à medida que as páginas da internet deixavam de ser apenas documentos de texto estáticos
+                  e passavam a ser aplicações interativas e complexas.
+            </p>
+
+        </section>
+
+<section id="informacao" class="container bg-white p-4 rounded mb-4 conteudo">
+
+    <h2 class="text-primary mb-3">
+        Infográfico: Frameworks Web
+    </h2>
+
+    <p>
+        Explore os slides e conheça a importância dos frameworks
+        no desenvolvimento de aplicações web.
+    </p>
+
+    <div id="carrosselBootstrap"
+    class="carousel slide"
+    data-bs-interval="false">
+
+        <div class="carousel-indicators">
+
+        <button type="button"
+             data-bs-target="#carrosselBootstrap"
+             data-bs-slide-to="0"
+             class="active"
+            aria-current="true"
+             aria-label="Slide 1">
+        </button>
+
+            <button type="button"
+                data-bs-target="#carrosselBootstrap"
+                data-bs-slide-to="1"
+                aria-label="Slide 2">
+            </button>
+
+            <button type="button"
+                data-bs-target="#carrosselBootstrap"
+                data-bs-slide-to="2"
+                aria-label="Slide 3">
+            </button>
+
+            <button type="button"
+                data-bs-target="#carrosselBootstrap"
+                data-bs-slide-to="3"
+                aria-label="Slide 4">
+            </button>
+
+        </div>
+
+     <div class="carousel-inner">
+         <div class="carousel-item active">
+
+             <div class="bg-primary text-white rounded p-5">
+
+                 <h3>01 — O que são Frameworks Web?</h3>
+
+    <p>
+    Frameworks são estruturas que oferecem
+    ferramentas e recursos prontos para facilitar
+     o desenvolvimento de aplicações.
+    </p>
+
+                    <p>
+                        Eles ajudam a organizar o código e reduzir
+                        tarefas repetitivas.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="carousel-item">
+
+                <div class="bg-success text-white rounded p-5">
+
+                    <h3>02 — HTML e CSS</h3>
+
+         <p>
+         HTML é responsável pela estrutura e organização
+         dos elementos de uma página.
+        </p>
+
+         <p>
+        CSS define a aparência, as cores, as fontes
+         e o posicionamento dos elementos.
+         </p>
+
+                </div>
+
+            </div>
+
+            <div class="carousel-item">
+
+                <div class="bg-dark text-white rounded p-5">
+
+                    <h3>03 — Bootstrap</h3>
+
+                    <p>
+                        Bootstrap é um framework front-end que oferece
+                        classes e componentes prontos para desenvolver
+                        interfaces responsivas.
+                    </p>
+
+                    <p>
+                        Com ele, podemos construir botões, menus,
+                        containers e outros elementos com mais rapidez.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="carousel-item">
+
+                <div class="bg-warning text-dark rounded p-5">
+
+                    <h3>04 — Classes na prática</h3>
+
+                    <p>
+                        O Bootstrap permite aplicar estilos diretamente
+                        nas classes dos elementos HTML.
+                    </p>
+
+                    <ul>
+                        <li><strong>.container:</strong> organiza o conteúdo.</li>
+                        <li><strong>.bg-primary:</strong> aplica fundo azul.</li>
+                        <li><strong>.text-white:</strong> deixa o texto branco.</li>
+                        <li><strong>.rounded:</strong> arredonda as bordas.</li>
+                        <li><strong>.p-4:</strong> adiciona espaçamento interno.</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carrosselBootstrap"
+            data-bs-slide="prev">
+
+            <span class="carousel-control-prev-icon"
+                aria-hidden="true"></span>
+
+            <span class="visually-hidden">Anterior</span>
+
+        </button>
+
+        <button class="carousel-control-next"
+            type="button"
+            data-bs-target="#carrosselBootstrap"
+            data-bs-slide="next">
+
+            <span class="carousel-control-next-icon"
+                aria-hidden="true"></span>
+
+            <span class="visually-hidden">Próximo</span>
+
+        </button>
+
     </div>
 
+    </section>
+
+<!-- EXEMPLOS PRÁTICOS -->
+<section class="container bg-white p-4 rounded mb-4 conteudo">
+
+    <h2 class="text-danger">
+        Bootstrap na prática
+    </h2>
+
+    <p>
+        Veja como algumas classes do Bootstrap facilitam
+        a construção de elementos de uma página web.
+    </p>
+
+    <!-- EXEMPLO DE CONTAINER -->
+    <div class="border rounded p-3 mb-4">
+
+        <h3 class="text-primary">1. Construção de Containers</h3>
+
+        <p>
+            A classe container organiza e centraliza o conteúdo,
+            enquanto container-fluid ocupa toda a largura disponível.
+        </p>
+
+        <div class="container bg-primary text-white p-3 rounded mb-3">
+            Exemplo utilizando .container
+        </div>
+
+        <div class="container-fluid bg-danger text-white p-3 rounded">
+            Exemplo utilizando .container-fluid
+        </div>
+
+    </div>
+
+     EXEMPLO DE NAVEGAÇÃO 
+    <div class="border rounded p-3">
+    <h3 class="text-success">2. Barra de Navegação</h3>
+
+        <p>
+         As classes navbar, bg-dark e navbar-dark ajudam
+         a construir uma barra de navegação.
+        </p>
+
+        <nav class="navbar navbar-expand navbar-dark bg-dark rounded px-3">
+         <a class="navbar-brand" href="#home">
+            Meu Site
+         </a>
+
+            <div class="navbar-nav">
+
+            <a class="nav-link active" href="#home">
+             Home
+            </a>
+
+             <a class="nav-link" href="#dicas">
+               Dicas
+            </a>
+
+            <a class="nav-link" href="#sobre">
+             Sobre
+            </a>
+         </div>
+     </nav>
+    </div>
+
+</section>
+
+
+        <!-- ENCERRAMENTO -->
+        <section id="encerramento" class="container bg-dark text-white p-4 rounded mb-4 conteudo">
+
+            <h2>Encerramento</h2>
+
+            <p>
+                As considerações finais. sobre o papel dos frameworks no desenvolvimento web moderno:
+                 mostram que eles são ferramentas essenciais para ganhar escala e produtividade,
+                  mas exigem equilíbrio e conhecimento técnico sólido da base.
+            </p>
+
+        </section>
+
+    </main>
+    <!-- Bootstrap JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+      
+    <Section id="Autor do Site" class="container bg-light p-5 rounded mb-5 conteudo">
+
+        <h2 class="text-primary">Autor do Site</h2>
+        <p>
+            Este site foi desenvolvido por Nathan, um aluno da ETEC Prof. José carlos Seno Junior de Olimpia, 
+            Cursando no 1°Mtec PI de desenvolvimento de sistemas.
+        </p>
+
+    </Section>
+
 </body>
 </html>
